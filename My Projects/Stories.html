@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ</title>
+    <link rel="icon" href="./images/لوجو.png" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@200..1000&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <!-- end link fonts -->
+  </head>
+  <body>
+    <main>
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-lg bg-transparent mt-5">
+        <div class="container flex-row-reverse">
+          <img
+            id="logo"
+            style="width: 100px"
+            class="mt-2 ms-5"
+            src="./images/لوجو.png"
+            alt="logo"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+             <i id="menuIcon" class="fa-solid fa-bars text-white fs-1"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-4 flex-row-reverse">
+              <li class="nav-item" id="firstnavitem">
+                <a
+                  class="nav-link text-white active px-3"
+                  aria-current="page"
+                  href="./index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Quran.html"
+                  >القرآن الكريم</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3 " href="./Azkar.html" >الأذكار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Doaa.html">الأدعية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./index.html#dros">دروس ومحاضرات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3 rounded-5" href="./Stories.html" style="background-color: #E6D69F;">قصص وعبر</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./bodcast.html">بودكاست ديني</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Pray.html">مواعيد الصلاة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="#">القبلة</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <audio id="zaker" src="./images/audios/zaker.aac"></audio>
+      <!-- navbar end -->
+      <section>
+         <h1 class="text-center text-white mt-5">
+          <span style="color: #e8d69f">قصص قرآنية</span>   -  تعلم وتدبر  
+        </h1>
+        <h4 class="text-center fw-light mt-4" style="color: #ffc108">لَقَدْ كَانَ فِي قِصَصِهِمْ عِبْرَةٌ لِأُوْلِي الْأَلْبَابِ</h4>
+        <div class="container" style="margin-top: 5%">
+ <div class="container">
+          <ul
+            class="nav nav-pills mb-3 justify-content-center gap-5"
+            id="pills-tab"
+
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile2"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                 قصص قرآنية
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home2"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                 قصص الانبياء
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content mt-4">
+            <div
+              class="tab-pane fade show active text-center text-white h3"
+              id="pills-home2"
+              role="tabpanel"
+              aria-labelledby="pills-home-tab"
+              tabindex="0"
+            >
+            <div class="row">
+                <div id="reading_story" class="pb-5">
+              <div
+                id="reading_the_story"
+                class="inner rounded-5 reading_morn_zekr the_story d-none"
+                style="
+                  background-color: #0a2147;
+                  height: 80vh;
+                  overflow-y: auto;
+                "
+              >
+                <div>
+                  <h2 id="story" class=" text-center mt-5 " style="cursor: pointer; color: #e8d69f" ></h2>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="row">
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة آدم عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أول البشر وأبو الأنبياء</p>
+            <button style="background-color: #E6D69F;" class="story_btn adam btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة نوح عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">شيخ المرسلين وصاحب السفينة</p>
+            <button style="background-color: #E6D69F;" class="story_btn noah btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة هود عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">نبي قوم عاد</p>
+            <button style="background-color: #E6D69F;" class="story_btn hod btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة صالح عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">نبي قوم ثمود ومعجزة الناقة</p>
+            <button style="background-color: #E6D69F;" class="story_btn saleh btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة إبراهيم عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">خليل الرحمن</p>
+            <button style="background-color: #E6D69F;" class="story_btn ibrahim btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة لوط عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">نبي قوم سدوم</p>
+            <button style="background-color: #E6D69F;" class="story_btn lot btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة إسماعيل عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">الذبيح ابن إبراهيم</p>
+            <button style="background-color: #E6D69F;" class="story_btn ismail btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة إسحاق عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">ابن إبراهيم وبشارة الملائكة</p>
+            <button style="background-color: #E6D69F;" class="story_btn ishak btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة يعقوب عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">إسرائيل وأبو الأسباط</p>
+            <button style="background-color: #E6D69F;" class="story_btn yaqub btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة يوسف عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">الصديق وصاحب الرؤى</p>
+            <button style="background-color: #E6D69F;" class="story_btn yusuf btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة شعيب عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">خطيب الأنبياء ونبي مدين</p>
+            <button style="background-color: #E6D69F;" class="story_btn shuaib btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة أيوب عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">رمز الصبر والابتلاء</p>
+            <button style="background-color: #E6D69F;" class="story_btn ayyub btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة ذو الكفل عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">مثال العدل والصبر</p>
+            <button style="background-color: #E6D69F;" class="story_btn thulkifl btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة يونس عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">صاحب الحوت</p>
+            <button style="background-color: #E6D69F;" class="story_btn yunus btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة موسى عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">كليم الله وصاحب المعجزات</p>
+            <button style="background-color: #E6D69F;" class="story_btn musa btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة هارون عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أخو موسى ووزيره</p>
+            <button style="background-color: #E6D69F;" class="story_btn harun btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة اليسع عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أحد أنبياء بني إسرائيل</p>
+            <button style="background-color: #E6D69F;" class="story_btn alyasa btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة داود عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">ملك ونبي وصاحب صوت جميل</p>
+            <button style="background-color: #E6D69F;" class="story_btn dawud btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة سليمان عليه السلام</hh3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">ملك ونبي سُخرت له الجن والريح</p>
+            <button style="background-color: #E6D69F;" class="story_btn sulaiman btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة إلياس عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">دعا قومه لترك الأصنام</p>
+            <button style="background-color: #E6D69F;" class="story_btn ilyas btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة زكريا عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">دعا ربه بالولد على الكبر</p>
+            <button style="background-color: #E6D69F;" class="story_btn zakaria btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة يحيى عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">سيدًا وحصورًا ونبيًا</p>
+            <button style="background-color: #E6D69F;" class="story_btn yahya btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة عيسى عليه السلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">كلمة الله وروح منه</p>
+            <button style="background-color: #E6D69F;" class="story_btn isa btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 mt-5">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قصة محمد ﷺ</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">خاتم الأنبياء والمرسلين</p>
+            <button style="background-color: #E6D69F;" class="story_btn muhammad btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+</div>
+            </div>
+            <div
+              class="tab-pane fade text-center text-white h3"
+              id="pills-profile2"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+              tabindex="0"
+            > 
+              <div class="row">
+                <div id="reading_story" class="pb-5">
+              <div
+                id="reading_the_story"
+                class="inner rounded-5 reading_morn_zekr quran_story d-none"
+                style="
+                  background-color: #0a2147;
+                  height: 80vh;
+                  overflow-y: auto;
+                "
+              >
+                <div>
+                  <h2 id="storyinner" class=" text-center mt-5 " style="cursor: pointer; color: #e8d69f" ></h2>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="row">
+
+    <!-- 1 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الأخدود</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قوم صبروا على التعذيب في سبيل التوحيد</p>
+            <button style="background-color: #E6D69F;" id="akhdoody" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الفيل</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">محاولة أبرهة لهدم الكعبة وأهلكهم الله بالأبابيل</p>
+            <button style="background-color: #E6D69F;" id="afil" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب القرية</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قوم كذبوا المرسلين فحلت بهم الآيات والهلاك</p>
+            <button style="background-color: #E6D69F;" id="village" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">صاحب الجنتين</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">رجل غرّه ماله فهلكت جنته بسبب كفره وبخله</p>
+            <button style="background-color: #E6D69F;" id="gardens" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">قارون</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">رجل طغى بماله فخسف الله به وبدرّه الأرض</p>
+            <button style="background-color: #E6D69F;" id="qarun" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب السبت</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قوم تحايلوا على حكم الله فحوّلهم عقابًا قردةً خاسئين</p>
+            <button style="background-color: #E6D69F;" id="sabbath" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الكهف</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">فتية آمنوا فنامهم الله مئات السنين آيةً في الثبات</p>
+            <button style="background-color: #E6D69F;" id="kahf" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">هدهد سليمان</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">الهدهد نقل خبر قوم يعبدون الشمس فأبلغ سليمان بحكمة</p>
+            <button style="background-color: #E6D69F;" id="hodhod" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">ملكة سبأ</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">ملكة حكيمة اهتدت بعد رؤية آيات وقوة سليمان</p>
+            <button style="background-color: #E6D69F;" id="balqis" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أهل مكة قبل الإسلام</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">حياة أهل مكة وأفعالهم قبل بعثة النبي ﷺ</p>
+            <button style="background-color: #E6D69F;" id="makka" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الأيكة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قوم شغفوا بالأصنام فهلكوا بسبب كفرهم</p>
+            <button style="background-color: #E6D69F;" id="aika" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أهل اليمن</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص الأمم قبل الإسلام وعقوباتهم على الطغيان</p>
+            <button style="background-color: #E6D69F;" id="yemen" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أهل العراق</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">الأحداث التي حدثت في أرض ما بين النهرين</p>
+            <button style="background-color: #E6D69F;" id="iraq" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب القرى البعيدة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام كفروا وعاقبهم الله بطرق مختلفة</p>
+            <button style="background-color: #E6D69F;" id="remotevillages" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب النار</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص من حذروا النار ونتائجها على الكفار</p>
+            <button style="background-color: #E6D69F;" id="firepeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 16 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الكرم</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عن الكرم وأثره في الدنيا والآخرة</p>
+            <button style="background-color: #E6D69F;" id="generous" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 17 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب المكر</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عن المكذبين والمخادعين وكيف أهلكهم الله</p>
+            <button style="background-color: #E6D69F;" id="tricksters" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 18 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الغابة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عن أحداث حصلت في أماكن بعيدة وعواقبهم</p>
+            <button style="background-color: #E6D69F;" id="forestpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 19 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب البحر</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص حول الغرق والعقاب في البحار</p>
+            <button style="background-color: #E6D69F;" id="seapeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 20 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الجبال</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عبرة عن العناد والطغيان في مناطق جبلية</p>
+            <button style="background-color: #E6D69F;" id="mountains" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 21 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أهل الصحراء</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص لأقوام عاشوا في الصحراء وطغوا فأهلكهم الله</p>
+            <button style="background-color: #E6D69F;" id="desert" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 22 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أهل المدينة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص تعاقب أهل المدن على الطغيان والكفر</p>
+            <button style="background-color: #E6D69F;" id="citypeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+     <!-- 23 -->
+<div class="col-md-4 mt-5 col-lg-3">
+    <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+        <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب العذاب العظيم</h3>
+        <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام تحدوا حدود الله فحلت بهم عقوبة عظيمة عبرة للأمم</p>
+        <button style="background-color: #E6D69F;" id="greatpunishment" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+    </div>
+</div>
+
+        <!-- 24 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الصخرة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام حُبسوا في صخرة بسبب ظلمهم</p>
+            <button style="background-color: #E6D69F;" id="rockpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 25 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الجسر</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عبرة عن قوم عابرو الجسور فهلكوا بسبب طغيانهم</p>
+            <button style="background-color: #E6D69F;" id="bridgepeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 26 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب القارب</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أحداث حصلت في قارب ضلّ قوم فيه وعوقبوا</p>
+            <button style="background-color: #E6D69F;" id="boatpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 27 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الكنز</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام غرّتهم الأموال والكنوز فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="treasurepeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 28 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الكهف الصغير</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">نسخة مصغرة من أصحاب الكهف آية في الصبر</p>
+            <button style="background-color: #E6D69F;" id="smallkahf" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 29 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الفجر</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام أضاعوا حياتهم قبل الفجر فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="fajrpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 30 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الليل</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عن أقوام ظلموا في الليل وعوقبوا</p>
+            <button style="background-color: #E6D69F;" id="nightpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 31 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب النهار</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام كذبوا الحق في النهار فأهلكهم الله</p>
+            <button style="background-color: #E6D69F;" id="daypeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 32 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب العيون</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام مراقبة ورُصدت أفعالهم الشريرة</p>
+            <button style="background-color: #E6D69F;" id="eyepeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 33 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الجموع</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عبرة عن أقوام كذّبوا الحق وجمعهم الله بالعقاب</p>
+            <button style="background-color: #E6D69F;" id="crowdpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 34 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب البئر</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام وقعوا في بئر واهلكهم الله بسبب الظلم</p>
+            <button style="background-color: #E6D69F;" id="wellpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 35 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الطريق</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام ظلموا الطريق وتفرغوا للشر فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="roadpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 36 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الظلال</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام اختبأوا في الظلال لفعل الشر فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="shadowpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 37 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب السماء</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عن أقوام تحدّوا السماء فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="skypeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 38 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الريح</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام أهلكهم الله بالريح بسبب ظلمهم</p>
+            <button style="background-color: #E6D69F;" id="windpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 39 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب النار الصغيرة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عبرة عن النار وعقاب الله للكفار</p>
+            <button style="background-color: #E6D69F;" id="smallfire" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 40 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الطغيان</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام عُرفوا بطغيانهم على الأرض فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="tyrants" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+    <!-- 41 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب الأخدود</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصّة قوم أشعلوا النار في الأخدود على المؤمنين</p>
+            <button style="background-color: #E6D69F;" id="akhdoof" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 42 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">الهدهد</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصّة الهدهد مع النبي سليمان عليه السلام</p>
+            <button style="background-color: #E6D69F;" id="hudhud" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 43 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أهل القرية الضائعة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام أهلكهم الله بسبب فسادهم في أرضهم</p>
+            <button style="background-color: #E6D69F;" id="lostvillage" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 44 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب النخلة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عبرة عن قوم ظالمين في ظل نخلة</p>
+            <button style="background-color: #E6D69F;" id="palmpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 45 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب البحر</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام غرقوا في البحر بسبب ظلمهم وكفرهم</p>
+            <button style="background-color: #E6D69F;" id="seapeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 46 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب القصور</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام بنوا قصوراً وجحدوا نعم الله فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="palacepeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 47 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب القرية الكبيرة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام جحدوا الحق في القرية فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="bigvillage" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 48 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب السوق</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">قصص عبرة عن قوم كذبوا ونصبوا في السوق</p>
+            <button style="background-color: #E6D69F;" id="marketpeople" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 49 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب القرية الذهبية</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">أقوام غرّتهم الثروات الذهبية فهلكوا</p>
+            <button style="background-color: #E6D69F;" id="goldvillage" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+    <!-- 50 -->
+    <div class="col-md-4 mt-5 col-lg-3">
+        <div class="inner quran_story_sec text-center rounded-4" style="background-color: #0A2147;">
+            <h3 class="fw-bolder fs-4 pt-4" style="color: #E7D79F;">أصحاب المغارة الكبيرة</h3>
+            <p class="fw-light fs-5 pt-4" style="color: #E7D79F;">نسخة مكبرة من أصحاب الكهف عبرة عظيمة</p>
+            <button style="background-color: #E6D69F;" id="bigcave" class="story_btn btn rounded-3 mb-5 px-4 py-1 mt-4 fs-5 fw-medium">.... عرض القصة</button>
+        </div>
+    </div>
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+        </div>
+      </section>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/Stories.js"></script>
+  </body>
+</html>

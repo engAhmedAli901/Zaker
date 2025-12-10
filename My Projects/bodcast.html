@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ</title>
+    <link rel="icon" href="./images/لوجو.png" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end link fonts -->
+  </head>
+  <body>
+    <main>
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-lg bg-transparent mt-5">
+        <div class="container flex-row-reverse">
+          <img
+            id="logo"
+            style="width: 100px"
+            class="mt-2 ms-5"
+            src="./images/لوجو.png"
+            alt="logo"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+        <i id="menuIcon" class="fa-solid fa-bars text-white fs-1"></i>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-4 flex-row-reverse">
+              <li class="nav-item" id="firstnavitem">
+                <a
+                  class="nav-link text-white active px-3"
+                  aria-current="page"
+                  href="./index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Quran.html"
+                  >القرآن الكريم</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Azkar.html">الأذكار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Doaa.html">الأدعية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3 " href="./index.html#dros"  >دروس ومحاضرات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Stories.html">قصص وعبر</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3 rounded-5" href="./bodcast.html" style="background-color: #E6D69F;">بودكاست ديني</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Pray.html">مواعيد الصلاة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="#">القبلة</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <audio id="zaker" src="./images/audios/zaker.aac"></audio>
+      <!-- navbar end -->
+
+ 
+      <section>
+        <div class="container">
+            <div class="row" id="lists">
+                
+            </div>
+        </div>
+      </section>
+
+    
+
+
+      
+
+
+
+
+
+
+       <section>
+        <div class="container">
+            <h1 id="playlist_title" class=" text-center text-white mt-5 pb-5"></h1>
+            <div class="row mt-4  d-none" id="video-list">
+                
+            </div>
+            <div class=" d-flex justify-content-center">
+                <button id="hidden" class="btn btn-primary text-center fs-5 mx-auto mt-5 fw-bolder d-none">الرجوع الي القائمة السابقة</button>
+            </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="container">
+            <h1 id="fav_list_title" class=" text-center text-white mt-5 pb-5"></h1>
+            <div class="row mt-4  d-none" id="fav-list">
+                
+            </div>
+            <div class=" d-flex justify-content-center">
+                <button id="fav_hidden" class="btn btn-primary text-center fs-5 mx-auto mt-5 fw-bolder d-none">الرجوع الي القائمة السابقة</button>
+            </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/bodcast.js"></script>
+  </body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ</title>
+    <link rel="icon" href="./images/لوجو.png" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end link fonts -->
+  </head>
+  <body>
+    <main>
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-lg bg-transparent mt-5">
+        <div class="container flex-row-reverse">
+          <img
+            id="logo"
+            style="width: 100px"
+            class="mt-2 ms-5"
+            src="./images/لوجو.png"
+            alt="logo"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+        <i id="menuIcon" class="fa-solid fa-bars text-white fs-1"></i>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-4 flex-row-reverse">
+              <li class="nav-item" id="firstnavitem">
+                <a
+                  class="nav-link text-white active px-3"
+                  aria-current="page"
+                  href="./index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Quran.html"
+                  >القرآن الكريم</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3 px-3" href="./Azkar.html">الأذكار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Doaa.html">الأدعية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./index.html#dros">دروس ومحاضرات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Stories.html">قصص وعبر</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./bodcast.html">بودكاست ديني</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3 rounded-5" href="./Pray.html"  style="background-color: #E6D69F;">مواعيد الصلاة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="#">القبلة</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <audio id="zaker" src="./images/audios/zaker.aac"></audio>
+      <!-- navbar end -->
+
+
+       <div class="input-group mb-3 w-75 mx-auto pt-4">
+        <label for="country" class="ms-auto me-2 fs-4 mb-3 fw-bolder text-warning"> : إسم الدولة</label>
+                  <input
+                    id="country"
+                    type="text"
+                    class="form-control w-100 rounded-5 border-1 border-warning text-white"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    style="background-color: #0b102a"
+                    placeholder="ادخل اسم الدولة ...."
+                  />
+                  <label for="city" class="ms-auto me-2 fs-4 mb-3 fw-bolder text-warning mt-3"> : إسم المدينة</label>
+                  <input
+                    id="city"
+                    type="text"
+                    class="form-control w-100 rounded-5 border-1 border-warning text-white"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    style="background-color: #0b102a"
+                    placeholder="ادخل اسم المدينة ...."
+                  />
+                </div>
+
+      <section style="margin-top: 5%;">
+        <div class="container">
+            <div class="row  flex-row-reverse rounded-5 container mx-auto pb-3" style="background-color: #283A4E;">
+               <div class="col-md-8 mt-3">
+                  <div class="inner" >
+                    <p  class="text-end text-secondary fs-4 date_time"></p>
+                    <div class="d-flex flex-row-reverse gap-3">
+                        <h1 class="text-warning text-end" style="font-size: 60px;"> صلاة الفجر</h1>
+                    <i id="pray_icon" class="fa-solid fa-moon me-1 text-white fajr_icon" style="font-size: 60px;"></i>
+                    </div>
+                     <div class="d-flex mt-3 flex-row-reverse align-items-center ms-auto ">    
+                        <h1 class=" text-warning  text-end fs-3">🤗 وقت لقاء ربك</h1>
+                        <i class="fa-solid fa-arrow-left-long fs-1 me-3 text-warning text-end "></i>
+                        <p id="fajr_time" class="text-white fs-1 text-end me-3 mt-2"></p>
+                     </div>
+                     <div class="text-white text-end">
+                      <p> قال صلى الله عليه وسلم : بشر المشائين بالظلم (أي في الظلام) بالنور التام يوم القيامة</p>
+                      <p>قال  صلى الله عليه وسلم : من صلى صلاة الصبح فهو في ذمة الله</p>
+                      <p>قول صلى الله عليه وسلم: يتعاقبون فيكم ملائكة بالليل وملائكة بالنهار، ويجتمعون في صلاة الفجر وصلاة العصر، ثم يعرج الذين باتوا فيكم فيسألهم ـ وهو أعلم بهم ـ كيف تركتم عبادي؟ فيقولون: تركناهم وهم يصلون وأتيناهم وهم يصلون</p>
+                      <p> قال سبحانه {أَقِمِ الصَّلَاةَ لِدُلُوكِ الشَّمْسِ إِلَىٰ غَسَقِ اللَّيْلِ وَقُرْآنَ الْفَجْرِ ۖ إِنَّ قُرْآنَ الْفَجْرِ كَانَ مَشْهُودًا}</p>
+                     </div>
+                 
+                </div>
+                </div>
+              <div class="col-md-4">
+                <div class="inner">
+                  <div class="mt-3 col-md-4 w-100" style="width: 300px;">
+                    <img class="w-100 " src="./images/pray_1.png" alt="">
+                 </div>
+                </div>
+              </div>
+               
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row  flex-row-reverse rounded-5 container mx-auto pb-3" style="background-color: #2B3B4B;">
+               <div class="col-md-8 mt-3">
+                  <div class="inner" >
+                    <p  class="text-end text-secondary fs-4 date_time"></p>
+                    <div class="d-flex flex-row-reverse gap-3">
+                        <h1 class="text-warning text-end" style="font-size: 60px;"> صلاة الشروق</h1>
+                    <p id="pray_icon" class="zohr_icon" style="font-size: 60px;">🌤️</p>
+                    </div>
+                     <div class="d-flex mt-3 flex-row-reverse align-items-center ms-auto ">    
+                        <h1 class=" text-warning  text-end fs-3">🤗 وقت لقاء ربك</h1>
+                        <i class="fa-solid fa-arrow-left-long fs-1 me-3 text-warning text-end "></i>
+                        <p id="shrok_time" class="text-white fs-1 text-end me-3 mt-2"></p>
+                     </div>
+                     <div class="text-white text-end">
+                      <p> قال صلى الله عليه وسلم : من صلى الفجرَ في جماعةٍ ثم قعدَ يذكُرُ اللهَ حتى تطلُعُ الشمسُ ثم صلى ركعتين كانت له كأجرِ حَجَّةٍ وعمرةٍ، تامَّةٍ، تامَّةٍ، تامَّةٍ</p>
+                     </div>
+                </div>
+                </div>
+              <div class="col-md-4">
+                <div class="inner">
+                  <div class="mt-3 col-md-4 w-100" style="width: 300px;">
+                    <img class="w-100 " src="./images/s_img2.jpeg" alt="">
+                 </div>
+                </div>
+              </div>
+               
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row  flex-row-reverse rounded-5 container mx-auto pb-3" style="background-color: #293B51;">
+               <div class="col-md-8 mt-3">
+                  <div class="inner" >
+                    <p  class="text-end text-secondary fs-4 date_time"></p>
+                    <div class="d-flex flex-row-reverse gap-3">
+                        <h1 class="text-warning text-end" style="font-size: 60px;"> صلاة الظهر</h1>
+                    <p id="pray_icon" class="zohr_icon" style="font-size: 60px;">☀️</p>
+                    </div>
+                     <div class="d-flex mt-3 flex-row-reverse align-items-center ms-auto ">    
+                        <h1 class=" text-warning  text-end fs-3">🤗 وقت لقاء ربك</h1>
+                        <i class="fa-solid fa-arrow-left-long fs-1 me-3 text-warning text-end "></i>
+                        <p id="zohr_time" class="text-white fs-1 text-end me-3 mt-2"></p>
+                     </div>
+                     <div class="text-white text-end">
+                      <p>اول صلاة صلاها النبي بعد رحلة الإسراء والمعراج</p>
+                      <p> قال صلى الله عليه وسلم : من صلى أربعاً قبل الظهر وأربعاً بعدها حرمه الله على النار</p>
+                      <p>قال صلي الله عليه وسلم : الصَّلَاةُ الخَمْسُ، وَالْجُمْعَةُ إلى الجُمْعَةِ، كَفَّارَةٌ لِما بيْنَهُنَّ، ما لَمْ تُغْشَ الكَبَائِرُ</p>
+                     </div>
+                 
+                </div>
+                </div>
+              <div class="col-md-4">
+                <div class="inner">
+                  <div class="mt-3 col-md-4 w-100" style="width: 300px;">
+                    <img class="w-100 " src="./images/Pray_3.jpg" alt="">
+                 </div>
+                </div>
+              </div>
+               
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row  flex-row-reverse rounded-5 container mx-auto pb-3" style="background-color: #263A52;">
+               <div class="col-md-8 mt-3">
+                  <div class="inner" >
+                    <p  class="text-end text-secondary fs-4 date_time"></p>
+                    <div class="d-flex flex-row-reverse gap-3">
+                        <h1 class="text-warning text-end" style="font-size: 60px;"> صلاة العصر</h1>
+                    <p id="pray_icon" class="asr_icon" style="font-size: 60px;">🌤️</p>
+                    </div>
+                     <div class="d-flex mt-3 flex-row-reverse align-items-center ms-auto ">    
+                        <h1 class=" text-warning  text-end fs-3">🤗 وقت لقاء ربك</h1>
+                        <i class="fa-solid fa-arrow-left-long fs-1 me-3 text-warning text-end "></i>
+                        <p id="asr_time" class="text-white fs-1 text-end me-3 mt-2"></p>
+                     </div>
+                     <div class="text-white text-end">
+                      <p>قال الله جل وعلا: حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلاةِ الْوُسْطَى [البقرة:238]  (الصلاة الوسطي هي صلاة العصر)</p>
+                      <p>قال صلي الله عليه وسلم : من فاتته صلاة العصر فكأنما وتر أهله وماله يعني: سلب أهله وماله</p>
+                      <p>قول صلى الله عليه وسلم: يتعاقبون فيكم ملائكة بالليل وملائكة بالنهار، ويجتمعون في صلاة الفجر وصلاة العصر، ثم يعرج الذين باتوا فيكم فيسألهم ـ وهو أعلم بهم ـ كيف تركتم عبادي؟ فيقولون: تركناهم وهم يصلون وأتيناهم وهم يصلون</p>
+                      <p> قال رسول الله ﷺ: "لَنْ يَلِجَ النَّارَ أَحَدٌ صَلَّى قَبْلَ طُلُوعِ الشَّمْسِ، وَقَبْلَ غُرُوبِهَا (الفجر والعصر)</p>
+                     </div>
+                 
+                </div>
+                </div>
+              <div class="col-md-4">
+                <div class="inner">
+                  <div class="mt-3 col-md-4 w-100" style="width: 300px;">
+                    <img class="w-100 " src="./images/praying.png" alt="">
+                 </div>
+                </div>
+              </div>
+               
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row  flex-row-reverse rounded-5 container mx-auto pb-3" style="background: linear-gradient(to top, rgb(34, 52, 70),rgb(42, 61, 81));">
+               <div class="col-md-8 mt-3">
+                  <div class="inner" >
+                     <p  class="text-end text-secondary fs-4 date_time"></p>
+                    <div class="d-flex flex-row-reverse gap-3">
+                        <h1 class="text-warning text-end" style="font-size: 60px;"> صلاة المغرب</h1>
+                    <p id="pray_icon" class="magreb_icon" style="font-size: 60px;">🌥️</p>
+                    </div>
+                     <div class="d-flex mt-3 flex-row-reverse align-items-center ms-auto ">    
+                        <h1 class=" text-warning  text-end fs-3">🤗 وقت لقاء ربك</h1>
+                        <i class="fa-solid fa-arrow-left-long fs-1 me-3 text-warning text-end "></i>
+                        <p id="magreb_time" class="text-white fs-1 text-end me-3 mt-2"></p>
+                     </div>
+                     <div class="text-white text-end">
+                      <p>قال صلى الله عليه وسلم: لا تزال أمتي على الفطرة ما لم يؤخروا المغرب حتى تشتبك النجوم</p>
+                     </div>
+                 
+                </div>
+                </div>
+              <div class="col-md-4">
+                <div class="inner">
+                  <div class="mt-3 col-md-4 w-100" style="width: 300px;">
+                    <img class="w-100 " src="./images/Pray_4.png" alt="">
+                 </div>
+                </div>
+              </div>
+               
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row  flex-row-reverse rounded-5 container mx-auto pb-3" style="background-color: #263A52;">
+               <div class="col-md-8 mt-3">
+                  <div class="inner" >
+                     <p  class="text-end text-secondary fs-4 date_time"></p>
+                    <div class="d-flex flex-row-reverse gap-3">
+                        <h1 class="text-warning text-end" style="font-size: 60px;"> صلاة العشاء</h1>
+                    <p id="pray_icon" class="isha_icon" style="font-size: 60px;">☁️</p>
+                    </div>
+                     <div class="d-flex mt-3 flex-row-reverse align-items-center ms-auto ">    
+                        <h1 class=" text-warning  text-end fs-4">🤗 وقت لقاء ربك</h1>
+                        <i class="fa-solid fa-arrow-left-long fs-1 me-3 text-warning text-end "></i>
+                        <p id="isha_time" class="text-white fs-1 text-end me-3 mt-2"></p>
+                     </div>
+                     <div class="text-white text-end">
+                      <p>النبي صلى الله عليه وسلم قال: لَيْسَ صَلَاةٌ ‌أَثْقَلَ ‌عَلَى ‌المُنَافِقِينَ مِنَ الفَجْرِ وَالعِشَاءِ، وَلَوْ يَعْلَمُونَ مَا فِيهِمَا لَأَتَوْهُمَا وَلَوْ حَبْوًا. لَقَدْ هَمَمْتُ أَنْ آمُرَ المُؤَذِّنَ، فَيُقِيمَ، ثُمَّ آمُرَ رَجُلًا يَؤُمُّ النَّاسَ، ثُمَّ آخُذَ شُعَلًا مِنْ نَارٍ، فَأُحَرِّقَ عَلَى مَنْ لَا يَخْرُجُ إِلَى الصَّلَاةِ بَعْدُ</p>
+                      <p>قال  صلى الله عليه وسلم :  من صلى العشاء في جماعة، فكأنما قام نصف الليل، ومن صلى الصبح في جماعة فكأنما صلى الليل كله.</p>
+                     </div>
+                 
+                </div>
+                </div>
+              <div class="col-md-4">
+                <div class="inner">
+                  <div class="mt-3 col-md-4 w-100" style="width: 300px;">
+                    <img class="w-100 " src="./images/Pray_5.png" alt="">
+                 </div>
+                </div>
+              </div>
+               
+            </div>
+        </div>
+      </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+     <script src="./js/index.js"></script>
+    <script src="./js/Pray.js"></script>
+  </body>
+</html>

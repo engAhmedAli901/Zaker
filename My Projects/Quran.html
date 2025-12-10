@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ</title>
+    <link rel="icon" href="./images/لوجو.png" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end link fonts -->
+  </head>
+  <body>
+    <main>
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-lg bg-transparent mt-5">
+        <div class="container flex-row-reverse">
+          <img
+            id="logo"
+            style="width: 100px"
+            class="mt-2 ms-5"
+            src="./images/لوجو.png"
+            alt="logo"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+        <i id="menuIcon" class="fa-solid fa-bars text-white fs-1"></i>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-4 flex-row-reverse">
+              <li class="nav-item" id="firstnavitem">
+                <a
+                  class="nav-link text-white active px-3"
+                  aria-current="page"
+                  href="./index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white rounded-5 px-3" href="./Quran.html"
+                style="background-color: #E6D69F;"
+                  >القرآن الكريم</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Azkar.html">الأذكار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Doaa.html">الأدعية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./index.html#dros">دروس ومحاضرات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Stories.html">قصص وعبر</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./bodcast.html">بودكاست ديني</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Pray.html">مواعيد الصلاة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="#">القبلة</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <audio id="zaker" src="./images/audios/zaker.aac"></audio>
+      <!-- navbar end -->
+      <section style="margin-top: 10%">
+        <h1 class="text-center text-white">
+          <span style="color: #e8d69f">القُرآنُ الكَريمُ</span>- تِلَاوَةٌ
+          وَاسْتِمَاعٌ
+        </h1>
+        <div class="container" style="margin-top: 10%">
+          <div class="row">
+            <div id="reading_quran" class="col-md-8 pb-5">
+              <div
+                id="reading_ayat"
+                class="inner rounded-5 d-none"
+                style="
+                  background-color: #0a2147;
+                  height: 75vh;
+                  height: 120vh;
+                  overflow-y: auto;
+                "
+              >
+                <h1 id="basmala" class="text-white text-center mt-5">
+                  بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+                </h1>
+                <div>
+                  <h2 id="Alayat" class="text-white text-center mt-5" style="cursor: pointer;" ></h2>
+                  <div id="ayaaudio"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 pb-5">
+              <div
+                class="inner rounded-5"
+                style="
+                  background-color: #0a2147;
+                  height: 78vh;
+                  overflow-y: auto;
+                "
+                id="scroll_inner"
+              >
+                <h4 class="text-white text-end pt-5 pe-4">فهرس السور</h4>
+                <div class="input-group mb-3 w-75 mx-auto pt-4">
+                  <input
+                    id="fhres"
+                    type="text"
+                    class="form-control w-100 rounded-3 border-1 border-warning text-white"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    style="background-color: #0b102a"
+                    placeholder="... ابحث عن سورة"
+                  />
+                </div>
+                <div class="container pt-3" id="fhres_display"></div>
+              </div>
+              <div
+                class="inner rounded-5 mt-3"
+                style="
+                  background-color: #0a2147;
+                  height: 40vh;
+                  overflow-y: auto;
+                "
+                id="kare_inner"
+              >
+                <h4 class="text-white text-end pt-2 pe-4">اختر القارئ</h4>
+                <div class="input-group mb-3 w-75 mx-auto pt-4">
+                  <input
+                    id="kare"
+                    type="text"
+                    class="form-control w-100 rounded-3 border-1 border-warning text-white"
+                    aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default"
+                    style="background-color: #0b102a"
+                    placeholder="... ابحث عن القارئ"
+                  />
+                </div>
+                <div class="container pt-3" id="kare_display"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="tafseer" class="pb-5 ">
+              <div
+                id="tafseer_ayat"
+                class="inner rounded-5 d-none"
+                style="
+                  background-color: #0a2147;
+                  height: 50vh;
+                  overflow-y: auto;
+                "
+              >
+                <h1 id="tafseer_header" class="text-white text-center mt-5">
+                  تفسير السورة
+                </h1>
+                <div>
+                  <h2 id="Altafseer" class="text-white text-center mt-5"></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              id="audiosec"
+              class="inner rounded-4 mb-5 pb-3  d-none"
+              style="background-color: #0a2147; height: fit-content; overflow-y: auto;"
+            >
+              <div
+                class="mt-4 d-flex gap-5 flex-row-reverse align-items-center"
+              >
+                <img
+                  class="rounded-5 border border-2 border-primary"
+                  style="width: 200px"
+                  src="./images/listening.avif"
+                  alt="listening"
+                />
+                <div id="openvoice" class="text-white text-end"></div>
+              </div>
+              <div class="audio-player text-center">
+                <div
+                id="progress-container"
+                  class="progress mt-4"
+                  style="background-color: transparent"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="10"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <input type="range" id="progress-bar"
+                    class="progress-bar w-100"
+                    style="background: #e8d8a2 !important; accent-color: #e8d8a2; cursor: pointer;" value="0" min="0" max="100" step="1">
+                </div>
+                <div class="d-flex justify-content-between text-white">
+                  <p id="start_time">00:00:00</p>
+                  <p id="end_time">00:00:00</p>
+                </div>
+               <div class="d-flex justify-content-center gap-3">
+                <div id="voiceprevicon" class="">
+                    <i
+                  
+                  class="fa-solid fa-angles-left  fs-1 mt-3 border-2 border rounded-circle px-1 py-2 border-warning"
+                  style="
+                    color: #e8d69f;
+                    background-color: #101b39;
+                    cursor: pointer;
+                  "
+                ></i>
+                </div>
+                 <div id="voiceplayicon">
+                  <i
+                    class="fa-solid fa-play fs-1 mt-3 border-2 border rounded-circle px-1 py-2 border-warning"
+                    style="
+                      color: #e8d69f;
+                      background-color: #101b39;
+                      cursor: pointer;
+                    "
+                  ></i>
+                </div>
+                <div id="voicestopicon" class="d-none">
+                    <i
+                  
+                  class="fa-solid fa-circle-pause  fs-1 mt-3 border-2 border rounded-circle px-1 py-2 border-warning"
+                  style="
+                    color: #e8d69f;
+                    background-color: #101b39;
+                    cursor: pointer;
+                  "
+                ></i>
+                </div>
+                <div id="voicenexticon" class="">
+                    <i
+                  
+                  class="fa-solid fa-angles-right  fs-1 mt-3 border-2 border rounded-circle px-1 py-2 border-warning"
+                  style="
+                    color: #e8d69f;
+                    background-color: #101b39;
+                    cursor: pointer;
+                  "
+                ></i>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/Quran.js"></script>
+  </body>
+</html>

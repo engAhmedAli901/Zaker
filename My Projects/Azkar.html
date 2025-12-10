@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ</title>
+    <link rel="icon" href="./images/لوجو.png" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end link fonts -->
+  </head>
+  <body>
+    <main>
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-lg bg-transparent mt-5">
+        <div class="container flex-row-reverse">
+          <img
+            id="logo"
+            style="width: 100px"
+            class="mt-2 ms-5"
+            src="./images/لوجو.png"
+            alt="logo"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+        <i id="menuIcon" class="fa-solid fa-bars text-white fs-1"></i>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-4 flex-row-reverse">
+              <li class="nav-item" id="firstnavitem">
+                <a
+                  class="nav-link text-white active px-3"
+                  aria-current="page"
+                  href="./index.html"
+                  >الرئيسية</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Quran.html"
+                  >القرآن الكريم</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3  rounded-5 px-3" href="./Azkar.html" style="background-color: #E6D69F;">الأذكار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Doaa.html">الأدعية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./index.html#dros">دروس ومحاضرات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Stories.html">قصص وعبر</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./bodcast.html">بودكاست ديني</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="./Pray.html">مواعيد الصلاة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white px-3" href="#">القبلة</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <audio id="zaker" src="./images/audios/zaker.aac"></audio>
+      <!-- navbar end -->
+      <section style="margin-top: 10%">
+        <h1 class="text-center text-white">
+          <span style="color: #e8d69f">ذِكْرُ اللهِ حِصْنُ المُؤْمِنِ</span>   -  أذكارٌ يَوْمِيَّةٌ 
+        </h1>
+        <h4 class="text-center  mt-4 fw-light" style="color: #ffc108">🤲 وَالذَّاكِرِينَ اللَّهَ كَثِيرًا وَالذَّاكِرَاتِ أَعَدَّ اللَّهُ لَهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًا</h4>
+        <div class="container" style="margin-top: 10%">
+          <div class="row">
+            <div id="reading_azkar" class="col-md-8 pb-5">
+              <div
+                id="reading_zekr"
+                class="inner rounded-5 reading_morn_zekr the_zekr d-none"
+                style="
+                  background-color: #0a2147;
+                  height: 75vh;
+                  height: 120vh;
+                  overflow-y: auto;
+                "
+              >
+                <div>
+                  <h2 id="morn_zekr" class="zekr_content text-center mt-5 " style="cursor: pointer; color: #e8d69f" ></h2>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 pb-5">
+              <div
+                class="inner rounded-5"
+                style="
+                  background-color: #0a2147;
+                  height: 78vh;
+                  overflow-y: auto;
+                "
+                id="scroll_inner"
+              >
+                <h4 class="text-white text-end pt-5 pe-4">أقسام الأذكار</h4>
+                <div class="container pt-3">
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i id="morn_open" class=" fa-solid fa-play text-warning ms-3 mt-1"  style="cursor: pointer" onclick="display_morning_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكار الصَّباحِ</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">1</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i id="even_open" class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_evening_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder" >أذكار المساء</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">2</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_sleep_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكارُ النوم</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">3</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_weakup_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكارُ الاستيقاظ</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">4</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_entermasged_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكار دخول المسجد</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">5</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_leavemasged_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكار الخروج من المسجد</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">5</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_enterhome_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكار دخول البيت</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">6</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_leavehome_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكار الخروج من البيت</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">7</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_beforePray_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكار الخروج للصلاة</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">8</span>
+                </div>
+                    </div>
+                    <div class="zekritems inner d-flex justify-content-between pt-3">
+                        <i class="fa-solid fa-play text-warning ms-3 mt-1 iconopen"  style="cursor: pointer" onclick="display_afterPray_Zekr()"></i>
+                        <div class="d-flex justify-content-end ">
+                    <p class="text-white fw-bolder">أذكار بعد الصلاة</p>
+                    <span class="fw-bolder ps-3" style="color: #e8d69f;">9</span>
+                </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/Azkar.js"></script>
+  </body>
+</html>
